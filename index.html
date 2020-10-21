@@ -19,7 +19,7 @@
        /*
              EX1) Write a selector to target the main title of the page*/
 
-             div div h1 {
+             h1  {
                  color:red
                  }
 
@@ -32,10 +32,10 @@
 
             
         /*     
-             EX3) Write a selector to target the "continue reading..." inside the jumbotron */
+             EX3) Write a selector to target the "continue reading..." inside the jumbotron NOES */
 
-             .jumbotron div p a {
-                 border: 5px yellow!important
+             .jumbotron .col:last-of-type a {
+                 border: 5px solid yellow
              }
         /*     
              EX4) Write a selector to target the first blogpost */
@@ -84,7 +84,7 @@
          */
 
 
-            /* body:nth-last-child(2) {font-size: xx-large;}*/
+            body:nth-last-child(0) {font-size: xx-large;}
      </style>
      <meta charset="utf-8" />
      <meta
@@ -525,11 +525,30 @@
          }
 
 
-    /*   EX14) Write a function to change the color of the main title
-         EX15) Write a function to change the column size for post headings
-         EX16) Write a function to remove all the links under "Elsewhere"
-         EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-         EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+    /*   EX14) Write a function to change the color of the main title*/
+
+         let newTitle=function(){
+             let title=document.querySelector('h1')
+             title.innerText="this is a more interesting title"
+         }
+
+         
+    /*   EX15) Write a function to change the column size for post headings
+         EX16) Write a function to remove all the links under "Elsewhere"*/
+    
+         let nowhere=function() {
+             let Array= document.getElementsByClassName("list-unstyled");
+             while (Array[1].firstChild) {
+                Array[1].removeChild(Array[1].lastChild);
+  }
+         }
+         
+
+
+    /*   EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post */
+
+
+    /*   EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
          EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
          EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
      */
